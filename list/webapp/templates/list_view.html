@@ -8,11 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/">Info about tasks</a>
+    <h1>Info about tasks</h1>
     <br>
-    <br>
-    <h1>List {{ list.id }}</h1>
+    <p>List {{ list.id }}</p>
     <p>Description: {{ list.description }}</p>
     <p>Status: {{ list.status }}</p>
+    <p>Deadline: {{ list.updated_at }}</p>
+
+    <a href="/">To the main</a>
 </body>
 </html>

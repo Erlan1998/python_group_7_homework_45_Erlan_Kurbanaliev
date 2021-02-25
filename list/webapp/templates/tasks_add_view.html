@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<h1>Create Article</h1>
+<form action="/list/add/" method="post">
+    {% csrf_token %}
+    <label>Description:</label><br/>
+    <input type="text" name="description"/><br/>
+    <label>Status:</label><br/>
+    <input type="text" name="status"/><br/>
+    <label>Deadline:</label><br/>
+    <input type="date" name="updated_at"/><br/>
+    <br/>
+    <input type="submit" value="Send"/>
+</form>
+</body>
+</html>
