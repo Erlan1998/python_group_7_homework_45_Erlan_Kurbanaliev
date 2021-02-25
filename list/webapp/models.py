@@ -2,8 +2,8 @@ from django.db import models
 
 
 class List(models.Model):
-    description = models.CharField(max_length=120, null=False, blank=False)
-    status = models.TextField(max_length=3000, null=False, blank=False)
+    description = models.TextField(max_length=3000, null=False, blank=False)
+    status = models.CharField(max_length=120, null=False, blank=False)
     updated_at = models.DateField(auto_now=True)
 
     class Meta:

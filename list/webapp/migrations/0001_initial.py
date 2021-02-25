@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name='List',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.CharField(max_length=120)),
-                ('status', models.TextField(max_length=3000)),
+                ('description', models.TextField(max_length=3000)),
+                ('status', models.CharField(max_length=120)),
                 ('updated_at', models.DateField(auto_now=True)),
             ],
             options={
