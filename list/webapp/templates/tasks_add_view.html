@@ -11,7 +11,13 @@
     <label>Description:</label><br/>
     <input type="text" name="description"/><br/>
     <label>Status:</label><br/>
-    <input type="text" name="status"/><br/>
+    <select name="status">
+        {% for i,j in status %}
+        <option value= {{ i }}>{{ j }}</option>
+        {% endfor %}
+    </select>
+    <br/>
+    <br/>
     <label>Deadline:</label><br/>
     <input type="date" name="updated_at"/><br/>
     <br/>
