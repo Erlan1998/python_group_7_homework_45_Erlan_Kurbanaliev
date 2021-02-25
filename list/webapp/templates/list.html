@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+<div class="container">
+    <h1>To do List</h1>
+    {% for list in lists %}  {# Перебираем список статей циклом #}
+        {# Создаём абзац, в котором отображем автора статьи и заголовок статьи, обёрнутый в ссылку, #}
+        {# которая ведёт на страницу статьи #}
+        <p><a href="/list?id={{ list.id }}">{{ list.description }}</a></p>
+    {% endfor %}
+
+</div>
+</body>
+</html>
