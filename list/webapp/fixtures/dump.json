@@ -1,0 +1,74 @@
+[
+{
+  "model": "webapp.list",
+  "pk": 1,
+  "fields": {
+    "description": "Wake up at 6:00",
+    "status": "done",
+    "updated_at": "2021-02-25"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 2,
+  "fields": {
+    "description": "do homework",
+    "status": "in_progress",
+    "updated_at": "2021-02-25"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 3,
+  "fields": {
+    "description": "Make a breakfast",
+    "status": "done",
+    "updated_at": "2021-02-25"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 4,
+  "fields": {
+    "description": "to wash the dishes",
+    "status": "new",
+    "updated_at": "2021-02-25"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 5,
+  "fields": {
+    "description": "to work",
+    "status": "done",
+    "updated_at": "2021-02-26"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 6,
+  "fields": {
+    "description": "to work",
+    "status": "done",
+    "updated_at": "2021-02-26"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$8jDxVn9gPC5N$ZrsOGYMXaZkN8m6agFzFIg9xGlMQie4O5QStmfmt9xI=",
+    "last_login": "2021-02-25T10:47:08.607Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-02-25T10:46:48.378Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
