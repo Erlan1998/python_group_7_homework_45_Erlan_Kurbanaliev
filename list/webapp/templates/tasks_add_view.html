@@ -10,6 +10,8 @@
     {% csrf_token %}
     <label>Description:</label><br/>
     <input type="text" name="description"/><br/>
+    <label>Detailed_desc:</label><br/>
+    <input type="text" name="detailed_description"/><br/>
     <label>Status:</label><br/>
     <select name="status">
         {% for i,j in status %}
