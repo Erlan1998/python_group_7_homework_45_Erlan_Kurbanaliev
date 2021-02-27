@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect
+from django.urls import reverse
 
 # Create your views here.
 from webapp.models import List, status_choices
@@ -31,4 +33,5 @@ def tasks_create_view(request):
             status=status,
             updated_at=updated_at
         )
-        return render(request, 'list_view.html', context={'list': list})
+        uri = reverse('index_tasks')
+        return HttpResponseRedirect(uri)

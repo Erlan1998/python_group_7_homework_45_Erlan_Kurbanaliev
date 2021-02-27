@@ -12,12 +12,10 @@
 <body>
 <div class="container">
     <h1>To do List</h1>
-    {% for list in lists %}  {# Перебираем список статей циклом #}
-        {# Создаём абзац, в котором отображем автора статьи и заголовок статьи, обёрнутый в ссылку, #}
-        {# которая ведёт на страницу статьи #}
+    {% for list in lists %}
         <p><a href="/list?id={{ list.id }}">{{ list.description }}</a></p>
     {% endfor %}
-    <a href="/list/add/">ADD TASKS</a>
+    <a href="{% url 'tasks_create' %}">ADD TASKS</a>
 </div>
 </body>
 </html>
