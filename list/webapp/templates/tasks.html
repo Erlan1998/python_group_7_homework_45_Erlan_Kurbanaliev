@@ -13,7 +13,7 @@
 <div class="container">
     <h1>To do List</h1>
     {% for list in lists %}
-        <p><a href="/list?id={{ list.id }}">{{ list.description }}</a></p>
+        <p><a href="{% url 'task' list.id%}">{{ list.description }}</a></p>
     {% endfor %}
     <a href="{% url 'tasks_create' %}">ADD TASKS</a>
 </div>

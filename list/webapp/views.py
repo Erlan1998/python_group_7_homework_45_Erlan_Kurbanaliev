@@ -11,10 +11,8 @@ def tasks_view(request):
     return render(request, 'tasks.html', context={'lists': list})
 
 
-def list_view(request):
-
-    list_id = request.GET.get('id')
-    list = List.objects.get(id=list_id)
+def list_view(request, id):
+    list = List.objects.get(id=id)
     return render(request, 'list_view.html', context={'list': list})
 
 
@@ -33,5 +31,5 @@ def tasks_create_view(request):
             status=status,
             updated_at=updated_at
         )
-        uri = reverse('index_tasks')
+        uri = reverse('task', kwargs={"id": list.id})
         return HttpResponseRedirect(uri)
