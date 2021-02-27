@@ -6,7 +6,7 @@ class ListAdmin(admin.ModelAdmin):
     list_display = ['id', 'description', 'status', 'updated_at']
     list_filter = ['status']
     search_fields = ['description']
-    fields = ['id', 'description', 'status', 'updated_at']
+    fields = ['id', 'description', 'status', 'updated_at', 'detailed_description']
     readonly_fields = ['updated_at', 'id']
 
 

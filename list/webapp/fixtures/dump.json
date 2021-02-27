@@ -4,6 +4,7 @@
   "pk": 1,
   "fields": {
     "description": "Wake up at 6:00",
+    "detailed_description": "detailed_description",
     "status": "done",
     "updated_at": "2021-02-25"
   }
@@ -13,6 +14,7 @@
   "pk": 2,
   "fields": {
     "description": "do homework",
+    "detailed_description": "detailed_description",
     "status": "in_progress",
     "updated_at": "2021-02-25"
   }
@@ -22,6 +24,7 @@
   "pk": 3,
   "fields": {
     "description": "Make a breakfast",
+    "detailed_description": "detailed_description",
     "status": "done",
     "updated_at": "2021-02-25"
   }
@@ -31,6 +34,7 @@
   "pk": 4,
   "fields": {
     "description": "to wash the dishes",
+    "detailed_description": "detailed_description",
     "status": "new",
     "updated_at": "2021-02-25"
   }
@@ -40,6 +44,7 @@
   "pk": 5,
   "fields": {
     "description": "to work",
+    "detailed_description": "detailed_description",
     "status": "done",
     "updated_at": "2021-02-26"
   }
@@ -49,8 +54,19 @@
   "pk": 6,
   "fields": {
     "description": "to work",
+    "detailed_description": "detailed_description",
     "status": "done",
     "updated_at": "2021-02-26"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 7,
+  "fields": {
+    "description": "driving",
+    "detailed_description": "detailed_description",
+    "status": "in_progress",
+    "updated_at": "2021-03-05"
   }
 },
 {

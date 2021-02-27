@@ -3,7 +3,8 @@ status_choices = [('new', 'Новая'), ('in_progress', 'В процессе'),
 
 
 class List(models.Model):
-    description = models.TextField(max_length=3000, null=False, blank=False)
+    description = models.TextField(max_length=1000, null=False, blank=False)
+    detailed_description = models.TextField(max_length=3000, null=True, blank=True)
     status = models.CharField(max_length=120, null=False, blank=False, choices=status_choices)
     updated_at = models.DateField(null=True, blank=True)
 
