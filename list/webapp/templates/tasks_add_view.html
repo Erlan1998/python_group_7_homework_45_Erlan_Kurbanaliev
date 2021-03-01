@@ -1,7 +1,7 @@
 {% extends 'shablon.html' %}
 
 {% block content %}
-<h1>Create Article</h1>
+<h1>Create Task</h1>
 <form action="{% url 'tasks_create' %}" method="post">
     {% csrf_token %}
     <label>Description:</label><br/>
@@ -21,6 +21,5 @@
     <br/>
     <input type="submit" value="Send"/>
     <br/>
-    <a href="{% url 'index_tasks' %}">To the main</a>
 </form>
 {% endblock content %}
