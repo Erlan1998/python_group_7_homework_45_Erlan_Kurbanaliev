@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect
-from django.urls import reverse
 
-# Create your views here.
+
 from webapp.models import List, status_choices
 
 
