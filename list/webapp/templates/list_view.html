@@ -1,11 +1,14 @@
 {% extends 'shablon.html' %}
 
 {% block content %}
-    <h1>Info about tasks</h1>
-    <br>
-    <p>Description: {{ list.description }}</p>
-    <p>Detailed_description: {{ list.detailed_description }}</p>
-    <p>Status: {{ list.status }}</p>
-    <p>Deadline: {{ list.updated_at }}</p>
+    <div class="container">
+        <h1>Info about tasks</h1>
+        <br>
+        <p>Description: {{ list.description }}</p>
+        <p>Detailed_description: {{ list.detailed_description }}</p>
+        <p>Status: {{ list.status }}</p>
+        <p>Deadline: {{ list.updated_at }}</p>
+    </div>
+
 
 {% endblock content %}

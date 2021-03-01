@@ -2,13 +2,12 @@
 
 {% block content %}
     <div class="container">
-        <h1>Task list</h1>
+        <h2>Task list</h2>
         {% if not lists %}
             <h2>NOT TASKS</h2>
         {% endif  %}
         {% for list in lists %}
             <p><a href="{% url 'task' list.id%}">{{ list.description }}</a></p>
         {% endfor %}
-        <a href="{% url 'tasks_create' %}">ADD TASKS</a>
     </div>
 {% endblock content %}
