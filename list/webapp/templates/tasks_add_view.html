@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Create</title>
-</head>
-<body>
+{% extends 'shablon.html' %}
+
+{% block content %}
 <h1>Create Article</h1>
 <form action="{% url 'tasks_create' %}" method="post">
     {% csrf_token %}
@@ -27,5 +23,4 @@
     <br/>
     <a href="{% url 'index_tasks' %}">To the main</a>
 </form>
-</body>
-</html>
+{% endblock content %}
