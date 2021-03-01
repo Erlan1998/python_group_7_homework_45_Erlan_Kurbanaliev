@@ -1,16 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
-<div class="container">
-    <h1>To do List</h1>
-    {% for list in lists %}
-        <p><a href="{% url 'task' list.id%}">{{ list.description }}</a></p>
-    {% endfor %}
-    <a href="{% url 'tasks_create' %}">ADD TASKS</a>
-</div>
-</body>
-</html>
+{% extends 'shablon.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>To do List</h1>
+        {% for list in lists %}
+            <p><a href="{% url 'task' list.id%}">{{ list.description }}</a></p>
+        {% endfor %}
+        <a href="{% url 'tasks_create' %}">ADD TASKS</a>
+    </div>
+{% endblock content %}
