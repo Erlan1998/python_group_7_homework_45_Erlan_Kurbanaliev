@@ -9,6 +9,7 @@
         <p>Status: {{ list.status }}</p>
         <p>Deadline: {{ list.updated_at }}</p>
         <a href="{% url 'list_update' list.id %}"><button type="button" class="btn btn-warning">Редактировать!</button></a>
+        <a href="{% url 'list_delete' list.id %}"><button type="button" class="btn btn-secondary">Удаление!</button></a>
     </div>
 
 

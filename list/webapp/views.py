@@ -46,4 +46,12 @@ def list_update_view(request, id):
         list.save()
         return redirect('task', id=list.id)
 
+def list_delete_view(request, id):
+    list = get_object_or_404(List, id=id)
+    if request.method == 'GET':
+        return render(request, 'list_delete.html', context={'list': list})
+    elif request.method == 'POST':
+        list.delete()
+    return redirect('index_tasks')
+
 
