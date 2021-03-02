@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 
 from webapp.models import List, status_choices
@@ -10,7 +10,7 @@ def tasks_view(request):
 
 
 def list_view(request, id):
-    list = List.objects.get(id=id)
+    list = get_object_or_404(List, id=id)
     return render(request, 'list_view.html', context={'list': list})
 
 
@@ -34,3 +34,11 @@ def tasks_create_view(request):
         )
 
         return redirect('task', id=list.id)
+
+def list_update_view(request, id):
+    list = get_object_or_404(List, id=id)
+    if request.method == 'GET':
+        return render(request, 'list_update.html', context={'list': list, "status": status_choices})
+    elif request.method == 'POST':
+        pass
+
