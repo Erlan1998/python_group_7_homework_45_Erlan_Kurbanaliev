@@ -8,6 +8,7 @@
         <p>Detailed_description: {{ list.detailed_description }}</p>
         <p>Status: {{ list.status }}</p>
         <p>Deadline: {{ list.updated_at }}</p>
+        <a href="{% url 'list_update' list.id %}"><button type="button" class="btn btn-warning">Редактировать!</button></a>
     </div>
 
 
