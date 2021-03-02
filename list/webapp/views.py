@@ -21,7 +21,6 @@ def tasks_create_view(request):
         description = request.POST.get('description')
         detailed_description = request.POST.get('detailed_description')
         status = request.POST.get('status')
-
         updated_at = request.POST.get('updated_at')
         if updated_at == '':
             updated_at = None
@@ -40,5 +39,11 @@ def list_update_view(request, id):
     if request.method == 'GET':
         return render(request, 'list_update.html', context={'list': list, "status": status_choices})
     elif request.method == 'POST':
-        pass
+        list.description = request.POST.get('description')
+        list.detailed_description = request.POST.get('detailed_description')
+        list.status = request.POST.get('status')
+        list.updated_at = request.POST.get('updated_at')
+        list.save()
+        return redirect('task', id=list.id)
+
 
