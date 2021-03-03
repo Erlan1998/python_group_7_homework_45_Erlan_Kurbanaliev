@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 
 from webapp.models import List, status_choices
+from webapp.froms import ListForm
 
 
 def tasks_view(request):
@@ -16,23 +17,19 @@ def list_view(request, id):
 
 def tasks_create_view(request):
     if request.method == "GET":
-        return render(request, 'tasks_add_view.html', {'status': status_choices})
+        form = ListForm
+        return render(request, 'tasks_add_view.html', context={'form': form})
     elif request.method == "POST":
-        description = request.POST.get('description')
-        detailed_description = request.POST.get('detailed_description')
-        status = request.POST.get('status')
-        updated_at = request.POST.get('updated_at')
-        if updated_at == '':
-            updated_at = None
-
-        list = List.objects.create(
-            description=description,
-            detailed_description=detailed_description,
-            status=status,
-            updated_at=updated_at
-        )
-
-        return redirect('task', id=list.id)
+        form = ListForm(data=request.POST)
+        if form.is_valid():
+            list = List.objects.create(
+                description=form.cleaned_data.get('description'),
+                detailed_description = form.cleaned_data.get('detailed_description'),
+                status = form.cleaned_data.get('status'),
+                updated_at = form.cleaned_data.get('updated_at')
+            )
+            return redirect('task', id=list.id)
+        return render(request, 'tasks_add_view.html', context={'form': form})
 
 def list_update_view(request, id):
     list = get_object_or_404(List, id=id)
