@@ -1,36 +1,4 @@
-{#{% extends 'shablon.html' %}#}
-{##}
-{#{% block content %}#}
-{#<h1 xmlns="http://www.w3.org/1999/html">Редактировать статью! {{ list.id }}</h1>#}
-{#<form action="{% url "list_update" list.id %}" method="post">#}
-{#    {% csrf_token %}#}
-{#    <label>Description:</label><br/>#}
-{#    <input type="text" name="description" value="{{ list.description }}"/><br/>#}
-{#    <label>Detailed_desc:</label><br/>#}
-{#    <textarea type="text" name="detailed_description">{{ list.detailed_description }}</textarea><br/>#}
-{#    <label>Status:</label><br/>#}
-{#    <select name="status">#}
-{#            {% for i,j in status %}#}
-{#                {% if i == list.status %}#}
-{#                    <option value="{{ i }}" selected>{{ j }}</option>#}
-{#                {% else %}#}
-{#                    <option value="{{ i }}">{{ j }}</option>#}
-{#                {% endif %}#}
-{##}
-{#            {% endfor %}#}
-{#    </select>#}
-{#    <br/>#}
-{#    <br/>#}
-{#    <label>Deadline:</label><br/>#}
-{#    <input type="date" name="updated_at" value="{{ list.updated_at|date:"Y-m-d" }}"/><br/>#}
-{#    <br/>#}
-{#    <input type="submit" value="Send"/>#}
-{#    <br/>#}
-{#</form>#}
-{#{% endblock content %}#}
-{##}
-{# #}
-{#{% extends 'shablon.html' %}#}
+{% extends 'shablon.html' %}
 
 {% block content %}
     <form action="{% url "list_update" list.id %}" method="post">

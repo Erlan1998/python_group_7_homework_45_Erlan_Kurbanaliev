@@ -1,28 +1,3 @@
-{#{% extends 'shablon.html' %}#}
-{##}
-{#{% block content %}#}
-{#<h1>Create Task</h1>#}
-{#<form action="{% url 'tasks_create' %}" method="post">#}
-{#    {% csrf_token %}#}
-{#    <label>Description:</label><br/>#}
-{#    <input type="text" name="description"/><br/>#}
-{#    <label>Detailed_desc:</label><br/>#}
-{#    <input type="text" name="detailed_description"/><br/>#}
-{#    <label>Status:</label><br/>#}
-{#    <select name="status">#}
-{#        {% for i,j in status %}#}
-{#        <option value= {{ i }}>{{ j }}</option>#}
-{#        {% endfor %}#}
-{#    </select>#}
-{#    <br/>#}
-{#    <br/>#}
-{#    <label>Deadline:</label><br/>#}
-{#    <input type="date" name="updated_at"/><br/>#}
-{#    <br/>#}
-{#    <input type="submit" value="Send"/>#}
-{#    <br/>#}
-{#</form>#}
-{#{% endblock content %}#}
 
 {% extends 'shablon.html' %}
 
