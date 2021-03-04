@@ -21,6 +21,7 @@ from webapp.views import (
     tasks_create_view,
     list_update_view,
     list_delete_view,
+    some_delete_view,
 )
 
 urlpatterns = [
@@ -29,6 +30,7 @@ urlpatterns = [
     path('task/<int:id>/', list_view, name='task'),
     path('task/add/', tasks_create_view, name='tasks_create'),
     path('task/<int:id>/update', list_update_view, name='list_update'),
-    path('task/<int:id>/delete', list_delete_view, name='list_delete')
+    path('task/<int:id>/delete', list_delete_view, name='list_delete'),
+    path('task/some/delete', some_delete_view, name='some_delete')
 
 ]

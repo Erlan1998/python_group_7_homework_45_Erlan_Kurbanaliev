@@ -60,4 +60,13 @@ def list_delete_view(request, id):
         list.delete()
     return redirect('index_tasks')
 
-
+def some_delete_view(request):
+    list = List.objects.all()
+    if request.method == 'GET':
+        return render(request, 'some_delete.html', context={'lists': list})
+    elif request.method == 'POST':
+        remove_lists_id = request.POST.getlist("id")
+        for id in remove_lists_id:
+            remove_list = List.objects.get(id=id)
+            remove_list.delete()
+    return redirect('index_tasks')

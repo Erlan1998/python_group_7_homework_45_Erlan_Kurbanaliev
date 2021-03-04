@@ -1,0 +1,17 @@
+{% extends 'shablon.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Task list</h2>
+        {% if not lists %}
+            <h2>NOT TASKS</h2>
+        {% endif  %}
+        <form method="post" action="{% url 'some_delete' %}">
+                {% for list in lists %}
+                    {% csrf_token %}
+                    <p><input type="checkbox" name="id" value="{{ list.id }}"> <a href="{% url 'task' list.id%}">{{ list.description }}</a></p>
+                {% endfor %}<br>
+                <p><input type="submit" value="Отправить"></p>
+         </form>
+    </div>
+{% endblock content %}
