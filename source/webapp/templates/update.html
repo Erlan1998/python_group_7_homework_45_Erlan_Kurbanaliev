@@ -1,7 +1,10 @@
 {% extends 'shablon.html' %}
 
 {% block content %}
+    <div class="d-flex justify-content-center" style="text-align: center">
     <form action="{% url "product_update" product.id %}" method="post">
-        {% include "form.html" with button_text="Редактировать статью" %}
+        {% include "form.html" with button_text="Редактировать Товар" %}
     </form>
+    </div>
+
 {% endblock content %}

@@ -35,7 +35,7 @@ def product_update_view(request, id):
     product = get_object_or_404(Product, id=id)
     if request.method == 'GET':
         form = ProductForm(initial={
-            'name': product.description,
+            'name': product.name,
             'description': product.description,
             'category': product.category,
             'quantity': product.quantity,

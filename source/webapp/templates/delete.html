@@ -1,7 +1,7 @@
 {% extends 'shablon.html' %}
 
 {% block content %}
-    <H2> Вы увереныб что хотите удалить статью? {{ product.name }}</H2>
+    <H2> Вы уверены, что хотите удалить товар {{ product.name }} ? </H2>
     <form action="{% url 'product_delete' product.id %}" method="POST">
         {% csrf_token %}
         <input type="submit" value="Да"/>
