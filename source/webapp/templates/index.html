@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>HIIII</h1>
+{% extends 'shablon.html' %}
 
-</body>
-</html>
+{% block content %}
+    <div class="container">
+        <h2>Products list</h2>
+        {% if not products %}
+            <h2>NOT TASKS</h2>
+        {% endif  %}
+            {% for product in products %}
+                <p><a href="{% url 'index_all' %}">{{ product.name }}</a></p>
+            {% endfor %}
+
+    </div>
+{% endblock content %}
