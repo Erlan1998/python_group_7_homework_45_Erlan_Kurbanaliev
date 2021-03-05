@@ -1,28 +1,6 @@
 [
 {
   "model": "webapp.product",
-  "pk": 1,
-  "fields": {
-    "name": "jh",
-    "description": "34",
-    "category": "in_progress",
-    "balance": 1,
-    "price": "1.00"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 2,
-  "fields": {
-    "name": "banana",
-    "description": "",
-    "category": "new",
-    "balance": 23,
-    "price": "150.00"
-  }
-},
-{
-  "model": "webapp.product",
   "pk": 3,
   "fields": {
     "name": "Смокинг",
@@ -30,6 +8,94 @@
     "category": "Classic",
     "balance": 10,
     "price": "1000.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "Футбольная Форма",
+    "description": "",
+    "category": "sports",
+    "balance": 15,
+    "price": "700.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 5,
+  "fields": {
+    "name": "Бутсы Найк",
+    "description": "",
+    "category": "sports",
+    "balance": 10,
+    "price": "1500.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "Туфли OXFORD",
+    "description": "",
+    "category": "Classic",
+    "balance": 20,
+    "price": "1000.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 7,
+  "fields": {
+    "name": "Веник",
+    "description": "",
+    "category": "For home",
+    "balance": 300,
+    "price": "150.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 8,
+  "fields": {
+    "name": "Пылесос",
+    "description": "",
+    "category": "For home",
+    "balance": 30,
+    "price": "2000.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 9,
+  "fields": {
+    "name": "Книги",
+    "description": "",
+    "category": "for study",
+    "balance": 150,
+    "price": "400.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 10,
+  "fields": {
+    "name": "Ручки",
+    "description": "",
+    "category": "for study",
+    "balance": 5000,
+    "price": "10.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 11,
+  "fields": {
+    "name": "Корандаши",
+    "description": "",
+    "category": "for study",
+    "balance": 3000,
+    "price": "25.00"
   }
 },
 {
