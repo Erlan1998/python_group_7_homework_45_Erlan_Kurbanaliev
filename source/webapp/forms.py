@@ -8,4 +8,4 @@ class ProductForm(forms.Form):
     description = forms.CharField(max_length=2000, widget=widgets.Textarea, required=False,label='Информация')
     category = forms.ChoiceField(choices=category_choices, label='Категория')
     quantity = forms.IntegerField(label='Кол', min_value=0)
-    price = forms.DecimalField(label='Цена', max_digits=7, decimal_places=2)
+    price = forms.DecimalField(label='Цена', max_digits=7, decimal_places=2, min_value=0)
