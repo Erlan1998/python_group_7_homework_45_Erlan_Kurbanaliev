@@ -1,14 +1,25 @@
 {% extends 'shablon.html' %}
 
 {% block content %}
-    <div class="container">
-        <h2>Products list</h2>
         {% if not products %}
             <h2>NOT TASKS</h2>
         {% endif  %}
-            {% for product in products %}
-                <p><a href="{% url 'product' product.id %}">{{ product.name }}</a></p>
-            {% endfor %}
-
-    </div>
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Цена</th>
+                      <th scope="col">Категория</th>
+                    </tr>
+                  </thead>
+                 {% for product in products %}
+                  <tbody>
+                    <tr>
+                      <td><a href="{% url 'product' product.id %}">{{ product.name }}</a></td>
+                      <td>{{ product.price }}</td>
+                      <td>{{ product.get_category_display }}</td>
+                    </tr>
+                  </tbody>
+                 {% endfor %}
+                </table>
 {% endblock content %}

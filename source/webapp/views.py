@@ -9,9 +9,11 @@ def index_view(request):
     product = Product.objects.all()
     return render(request, 'index.html', context={'products': product})
 
+
 def product_view(request, id):
     product = get_object_or_404(Product, id=id)
     return render(request, 'product_view.html', context={'product': product})
+
 
 def product_add_view(request):
     if request.method == 'GET':
@@ -29,6 +31,7 @@ def product_add_view(request):
             )
             return redirect('product', id=product.id)
         return render(request, 'add_view.html', context={'product': product})
+
 
 def product_update_view(request, id):
     product = get_object_or_404(Product, id=id)
