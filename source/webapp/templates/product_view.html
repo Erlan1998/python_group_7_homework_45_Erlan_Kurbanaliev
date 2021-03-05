@@ -9,7 +9,7 @@
         <p>Categories: {{ product.get_category_display }}</p>
         <p>Quantity: {{ product.quantity }}</p>
         <a href="{% url 'product_update' product.id %}"><button type="button" class="btn btn-warning">Редактировать!</button></a>
-{#        <a href="{% url 'list_delete' list.id %}"><button type="button" class="btn btn-secondary">Удаление!</button></a>#}
+        <a href="{% url 'product_delete' product.id %}"><button type="button" class="btn btn-secondary">Удаление!</button></a>
     </div>
 
 

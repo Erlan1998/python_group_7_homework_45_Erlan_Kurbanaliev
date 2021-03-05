@@ -20,6 +20,7 @@ from webapp.views import (
     product_view,
     product_add_view,
     product_update_view,
+    product_delete_view,
 )
 
 
@@ -29,4 +30,5 @@ urlpatterns = [
     path('product/<int:id>/', product_view, name='product'),
     path('product/add/', product_add_view, name='product_add'),
     path('product/<int:id>/update', product_update_view, name='product_update'),
+    path('product/<int:id>/delete', product_delete_view, name='product_delete'),
 ]

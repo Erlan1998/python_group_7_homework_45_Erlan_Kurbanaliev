@@ -1,6 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
-
 from webapp.models import Product, category_choices
 from webapp.forms import ProductForm
 
@@ -55,3 +53,12 @@ def product_update_view(request, id):
             product.save()
             return redirect('product', id=product.id)
         return render(request, 'add_view.html', context={'form': form, 'product': product})
+
+
+def product_delete_view(request, id):
+    product = get_object_or_404(Product, id=id)
+    if request.method == 'GET':
+        return render(request, 'delete.html', context={'product': product})
+    elif request.method == 'POST':
+        product.delete()
+    return redirect('index_all')

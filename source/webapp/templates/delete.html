@@ -1,0 +1,10 @@
+{% extends 'shablon.html' %}
+
+{% block content %}
+    <H2> Вы увереныб что хотите удалить статью? {{ product.name }}</H2>
+    <form action="{% url 'product_delete' product.id %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Да"/>
+    </form>
+    <a href="{% url "product" product.id %}">Отмена!</a>
+{% endblock content %}
