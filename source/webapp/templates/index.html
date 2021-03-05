@@ -7,7 +7,7 @@
             <h2>NOT TASKS</h2>
         {% endif  %}
             {% for product in products %}
-                <p><a href="{% url 'index_all' %}">{{ product.name }}</a></p>
+                <p><a href="{% url 'product' product.id %}">{{ product.name }}</a></p>
             {% endfor %}
 
     </div>

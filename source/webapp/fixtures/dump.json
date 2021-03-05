@@ -26,7 +26,7 @@
   "pk": 5,
   "fields": {
     "name": "Бутсы Найк",
-    "description": "",
+    "description": "Радуется так душа, когда обувь хороша!",
     "category": "sports",
     "quantity": 10,
     "price": "1500.00"
@@ -37,7 +37,7 @@
   "pk": 6,
   "fields": {
     "name": "Туфли OXFORD",
-    "description": "",
+    "description": "Радуется так душа, когда обувь хороша!",
     "category": "Classic",
     "quantity": 20,
     "price": "1000.00"
@@ -48,7 +48,7 @@
   "pk": 7,
   "fields": {
     "name": "Веник",
-    "description": "",
+    "description": "В вашем доме будет чисто и уютно",
     "category": "For home",
     "quantity": 300,
     "price": "150.00"
@@ -59,7 +59,7 @@
   "pk": 8,
   "fields": {
     "name": "Пылесос",
-    "description": "",
+    "description": "В вашем доме будет чисто и уютно",
     "category": "For home",
     "quantity": 30,
     "price": "2000.00"
@@ -70,7 +70,7 @@
   "pk": 9,
   "fields": {
     "name": "Книги",
-    "description": "",
+    "description": "Разные Жанры книг!",
     "category": "for study",
     "quantity": 150,
     "price": "400.00"
@@ -81,7 +81,7 @@
   "pk": 10,
   "fields": {
     "name": "Ручки",
-    "description": "",
+    "description": "шариковые и обычные!",
     "category": "for study",
     "quantity": 5000,
     "price": "10.00"
@@ -92,7 +92,7 @@
   "pk": 11,
   "fields": {
     "name": "Корандаши",
-    "description": "",
+    "description": "Цветные и простые! качество пушка!",
     "category": "for study",
     "quantity": 3000,
     "price": "25.00"

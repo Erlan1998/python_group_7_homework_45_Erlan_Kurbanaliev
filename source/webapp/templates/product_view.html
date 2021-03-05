@@ -1,0 +1,16 @@
+{% extends 'shablon.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Информация о Продукте</h1>
+        <br>
+        <p>Name: {{ product.name }}</p>
+        <p>Description: {{ product.description }}</p>
+        <p>Categories: {{ product.category }}</p>
+        <p>Quantity: {{ product.quantity }}</p>
+{#        <a href="{% url 'list_update' list.id %}"><button type="button" class="btn btn-warning">Редактировать!</button></a>#}
+{#        <a href="{% url 'list_delete' list.id %}"><button type="button" class="btn btn-secondary">Удаление!</button></a>#}
+    </div>
+
+
+{% endblock content %}
