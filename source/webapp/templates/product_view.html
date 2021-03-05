@@ -8,7 +8,7 @@
         <p>Description: {{ product.description }}</p>
         <p>Categories: {{ product.category }}</p>
         <p>Quantity: {{ product.quantity }}</p>
-{#        <a href="{% url 'list_update' list.id %}"><button type="button" class="btn btn-warning">Редактировать!</button></a>#}
+        <a href="{% url 'product_update' product.id %}"><button type="button" class="btn btn-warning">Редактировать!</button></a>
 {#        <a href="{% url 'list_delete' list.id %}"><button type="button" class="btn btn-secondary">Удаление!</button></a>#}
     </div>
 
