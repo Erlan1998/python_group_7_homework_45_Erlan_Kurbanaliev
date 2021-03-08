@@ -62,3 +62,11 @@ def product_delete_view(request, id):
     elif request.method == 'POST':
         product.delete()
     return redirect('index_all')
+
+
+def search_view(request):
+    name = request.GET.get('name')
+    product = Product.objects.all().order_by('name').exclude(quantity=0)
+    if name:
+        product = product.filter(name=name)
+    return render(request, 'index.html', context={'products': product})

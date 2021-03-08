@@ -11,5 +11,12 @@
         <a class="nav-link" href="{% url 'product_add' %}">Добавление Товаров</a>
       </li>
     </ul>
+      <form action="{% url 'search' %}">
+                <div class="input-group">
+              <input name="name" type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                aria-describedby="search-addon" />
+              <button type="submit" class="btn btn-outline-primary">search</button>
+            </div>
+            </form>
   </div>
 </nav>
