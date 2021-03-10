@@ -70,3 +70,8 @@ def search_view(request):
     if name:
         product = product.filter(name=name)
     return render(request, 'index.html', context={'products': product})
+
+
+def category_chek(request, id):
+    product = get_object_or_404(Product, id=id)
+    return render(request, 'category_view.html', context={'product': product})
