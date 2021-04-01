@@ -5,5 +5,6 @@ from webapp.models import Product
 class ProductForm(forms.ModelForm):
 
     class Meta:
-        model =  Product
+        model = Product
         fields = ['name', 'description', 'category', 'quantity', 'price']
+

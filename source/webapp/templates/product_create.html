@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="d-flex justify-content-center" style="text-align: center">
-    <form action="{% url 'product_add' %}" method="post">
+    <form action="{% url 'product_create' %}" method="post">
         <div class="container">{% include "form.html" with button_text="Добавить товар" %}</div>
     </form>
     </div>

@@ -18,8 +18,8 @@ from django.urls import path
 from webapp.views import (
     ProductsAll,
     ProductView,
-    product_add_view,
-    product_update_view,
+    ProductCreate,
+    ProductUpdate,
     product_delete_view,
     search_view,
     category_chek,
@@ -30,8 +30,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ProductsAll.as_view(), name='index_all'),
     path('product/<int:id>/', ProductView.as_view(), name='product'),
-    path('product/add/', product_add_view, name='product_add'),
-    path('product/<int:id>/update', product_update_view, name='product_update'),
+    path('product/create/', ProductCreate.as_view(), name='product_create'),
+    path('product/<int:id>/update', ProductUpdate.as_view(), name='product_update'),
     path('product/<int:id>/delete', product_delete_view, name='product_delete'),
     path('search/', search_view, name='search'),
     path('chek/', category_chek, name='chek_cat')
