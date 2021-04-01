@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from webapp.views import (
-    index_view,
-    product_view,
+    ProductsAll,
+    ProductView,
     product_add_view,
     product_update_view,
     product_delete_view,
@@ -28,8 +28,8 @@ from webapp.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_view, name='index_all'),
-    path('product/<int:id>/', product_view, name='product'),
+    path('', ProductsAll.as_view(), name='index_all'),
+    path('product/<int:id>/', ProductView.as_view(), name='product'),
     path('product/add/', product_add_view, name='product_add'),
     path('product/<int:id>/update', product_update_view, name='product_update'),
     path('product/<int:id>/delete', product_delete_view, name='product_delete'),

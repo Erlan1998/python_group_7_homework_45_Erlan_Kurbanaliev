@@ -1,17 +1,21 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from webapp.models import Product, category_choices
+from webapp.models import Product
 from webapp.forms import ProductForm
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 
 
-def index_view(request):
-    product = Product.objects.all().order_by('category', 'name').exclude(quantity=0)
-    return render(request, 'index.html', context={'products': product})
+class ProductsAll(ListView):
+    template_name = 'index.html'
+    model = Product
+    context_object_name = 'products'
+    ordering = ('name', 'category')
+    paginate_by = 5
+    paginate_orphans = 2
 
-
-def product_view(request, id):
-    product = get_object_or_404(Product, id=id)
-    return render(request, 'product_view.html', context={'product': product})
-
+class ProductView(DetailView):
+    template_name = 'product_view.html'
+    model = Product
+    pk_url_kwarg = "id"
 
 def product_add_view(request):
     if request.method == 'GET':
