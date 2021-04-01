@@ -8,3 +8,5 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = ['name', 'description', 'category', 'quantity', 'price']
 
+class SearchForm(forms.Form):
+    search_value = forms.CharField(max_length=100, required=False, label='Найти')

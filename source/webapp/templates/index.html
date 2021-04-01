@@ -7,7 +7,7 @@
         {% if not products %}
             <h2>НЕТ ПРОДУКТОВ</h2>
     {% else %}
-{#        {% include "partial/search_form.html" %}#}
+        {% include "partial/search_form.html" %}
          {% endif %}
             {% for product in products %}
                 <div class="list-group">
