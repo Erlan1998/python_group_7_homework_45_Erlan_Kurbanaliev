@@ -4,8 +4,8 @@
   "pk": 3,
   "fields": {
     "name": "Смокинг",
-    "description": "",
-    "category": "Classic",
+    "description": "Мода меняется а стиль остается!",
+    "category": 3,
     "quantity": 10,
     "price": "1000.00"
   }
@@ -16,7 +16,7 @@
   "fields": {
     "name": "Футбольная Форма",
     "description": "",
-    "category": "sports",
+    "category": 2,
     "quantity": 15,
     "price": "700.00"
   }
@@ -27,7 +27,7 @@
   "fields": {
     "name": "Бутсы Найк",
     "description": "Радуется так душа, когда обувь хороша!",
-    "category": "sports",
+    "category": 2,
     "quantity": 10,
     "price": "1500.00"
   }
@@ -38,7 +38,7 @@
   "fields": {
     "name": "Туфли OXFORD",
     "description": "Радуется так душа, когда обувь хороша!",
-    "category": "Classic",
+    "category": 3,
     "quantity": 20,
     "price": "1000.00"
   }
@@ -49,20 +49,9 @@
   "fields": {
     "name": "Веник",
     "description": "В вашем доме будет чисто и уютно",
-    "category": "For home",
+    "category": 4,
     "quantity": 300,
     "price": "150.00"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 8,
-  "fields": {
-    "name": "Пылесос",
-    "description": "В вашем доме будет чисто и уютно",
-    "category": "For home",
-    "quantity": 30,
-    "price": "2000.00"
   }
 },
 {
@@ -71,7 +60,7 @@
   "fields": {
     "name": "Книги",
     "description": "Разные Жанры книг!",
-    "category": "for study",
+    "category": 5,
     "quantity": 150,
     "price": "400.00"
   }
@@ -82,7 +71,7 @@
   "fields": {
     "name": "Ручки",
     "description": "шариковые и обычные!",
-    "category": "for study",
+    "category": 5,
     "quantity": 5000,
     "price": "10.00"
   }
@@ -93,9 +82,66 @@
   "fields": {
     "name": "Корандаши",
     "description": "Цветные и простые! качество пушка!",
-    "category": "for study",
+    "category": 5,
     "quantity": 3000,
     "price": "25.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 12,
+  "fields": {
+    "name": "Мяч",
+    "description": "Футбольный мяч ЛЧ 2021!",
+    "category": 2,
+    "quantity": 300,
+    "price": "800.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 15,
+  "fields": {
+    "name": "Nike",
+    "description": "dfbfdbd",
+    "category": 2,
+    "quantity": 212,
+    "price": "12211.00"
+  }
+},
+{
+  "model": "webapp.categories",
+  "pk": 1,
+  "fields": {
+    "category": "other"
+  }
+},
+{
+  "model": "webapp.categories",
+  "pk": 2,
+  "fields": {
+    "category": "sports"
+  }
+},
+{
+  "model": "webapp.categories",
+  "pk": 3,
+  "fields": {
+    "category": "Classic"
+  }
+},
+{
+  "model": "webapp.categories",
+  "pk": 4,
+  "fields": {
+    "category": "For home"
+  }
+},
+{
+  "model": "webapp.categories",
+  "pk": 5,
+  "fields": {
+    "category": "for study"
   }
 },
 {
@@ -103,7 +149,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$216000$zyUQBKOazjPu$o6sKLl0xZiFhftbL1GeXUwyoifL855/Y4k3RxuBBHJU=",
-    "last_login": "2021-03-05T09:13:51.556Z",
+    "last_login": "2021-04-01T13:47:23.383Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",

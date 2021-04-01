@@ -1,5 +1,5 @@
 from django.contrib import admin
-from webapp.models import Product
+from webapp.models import Product, Categories
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
@@ -10,3 +10,4 @@ class ProductAdmin(admin.ModelAdmin):
     readonly_fields = ['id']
 
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Categories)
