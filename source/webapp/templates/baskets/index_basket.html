@@ -1,0 +1,33 @@
+{% extends 'shablon.html' %}
+
+{% block content %}
+<body style="background-size: 100%; background-image: url('https://digistr.ru/stream/wp-content/uploads/oformlenie-zakaza-na-saite.jpg') ">
+    <div class="container" style="max-width: 500px; color: black">
+        <h2>Корзина:</h2>
+        {% if not baskets %}
+            <h2>Корзина Пуста!</h2>
+        {% else %}
+
+            {% for basket in baskets %}
+                <div class="list-group list-group-item list-group-item-action">
+                  <a href="{% url 'product' basket.product.id %}" class="">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">{{ basket.product.name }}</h5>
+                      <small class="text-muted">
+                        <p>Цена: {{ basket.product.price }}</p>
+                        <p>Количество: {{ basket.quantity }}</p>
+                      </small>
+                    </div>
+                  </a>
+                    <form action="{% url 'delete_basket' basket.id %}" method="post">
+                      <div class="container">{% include "form.html" with button_text="Удалить с Корзины!" %}</div>
+                    </form>
+                </div>
+                </br>
+            {% endfor %}
+        <form action="{% url 'booking_create' %}" method="post">
+        <div class="container">{% include "form.html" with button_text="оформить Закакз!" form=form_b %}</div>
+    </form>{% endif %}
+    </div>
+</body>
+{% endblock content %}
