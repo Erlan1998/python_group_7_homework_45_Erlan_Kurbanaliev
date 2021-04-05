@@ -1,17 +1,6 @@
 [
 {
   "model": "webapp.product",
-  "pk": 3,
-  "fields": {
-    "name": "Смокинг",
-    "description": "Мода меняется а стиль остается!",
-    "category": 3,
-    "quantity": 10,
-    "price": "1000.00"
-  }
-},
-{
-  "model": "webapp.product",
   "pk": 4,
   "fields": {
     "name": "Футбольная Форма",
@@ -28,7 +17,7 @@
     "name": "Бутсы Найк",
     "description": "Радуется так душа, когда обувь хороша!",
     "category": 2,
-    "quantity": 10,
+    "quantity": 16,
     "price": "1500.00"
   }
 },
@@ -50,7 +39,7 @@
     "name": "Веник",
     "description": "В вашем доме будет чисто и уютно",
     "category": 4,
-    "quantity": 300,
+    "quantity": 297,
     "price": "150.00"
   }
 },
@@ -61,7 +50,7 @@
     "name": "Книги",
     "description": "Разные Жанры книг!",
     "category": 5,
-    "quantity": 150,
+    "quantity": 100,
     "price": "400.00"
   }
 },
@@ -103,10 +92,21 @@
   "pk": 15,
   "fields": {
     "name": "Nike",
-    "description": "dfbfdbd",
+    "description": "Лучшая спортивная компания в мире!",
     "category": 2,
-    "quantity": 212,
+    "quantity": 200,
     "price": "12211.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 20,
+  "fields": {
+    "name": "Смокинг",
+    "description": "Fdbvkjndfkjvnjfkdvdfv",
+    "category": 3,
+    "quantity": 200,
+    "price": "1500.00"
   }
 },
 {
@@ -145,11 +145,94 @@
   }
 },
 {
+  "model": "webapp.bookingproduct",
+  "pk": 1,
+  "fields": {
+    "product": 10,
+    "booking": 1,
+    "quantity": 100
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 2,
+  "fields": {
+    "product": 9,
+    "booking": 1,
+    "quantity": 44
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 3,
+  "fields": {
+    "product": 15,
+    "booking": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 4,
+  "fields": {
+    "product": 15,
+    "booking": 2,
+    "quantity": 23
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 5,
+  "fields": {
+    "product": 5,
+    "booking": 2,
+    "quantity": 4
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 6,
+  "fields": {
+    "product": 7,
+    "booking": 2,
+    "quantity": 3
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 7,
+  "fields": {
+    "product": 9,
+    "booking": 2,
+    "quantity": 6
+  }
+},
+{
+  "model": "webapp.booking",
+  "pk": 1,
+  "fields": {
+    "name": "Putin",
+    "tel": "0399393939",
+    "adrese": "Moscva",
+    "created_at": "2021-04-05T12:40:04.718Z"
+  }
+},
+{
+  "model": "webapp.booking",
+  "pk": 2,
+  "fields": {
+    "name": "Erlan",
+    "tel": "0502010720",
+    "adrese": "Bishkek",
+    "created_at": "2021-04-05T12:50:07.308Z"
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$216000$zyUQBKOazjPu$o6sKLl0xZiFhftbL1GeXUwyoifL855/Y4k3RxuBBHJU=",
-    "last_login": "2021-04-01T13:47:23.383Z",
+    "last_login": "2021-04-05T12:41:38.623Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
