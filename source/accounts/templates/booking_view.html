@@ -4,9 +4,10 @@
     </br>
     <body style="background-size: 100%; background-image: url('https://image.freepik.com/free-vector/shopping-online-on-website-online-store-shop-concept_100456-95.jpg') ">
     <div class="container" style="max-width: 500px; color: aliceblue">
+    {% if user.is_authenticated %}
         {% if not bookings %}
             <h2>НЕТ ЗАКАЗОВ</h2>
-    {% else %}
+        {% else %}
         {% include "partial/search_form.html" %}
             {% for booking in bookings %}
                 <div class="list-group list-group-item list-group-item-action">
@@ -38,6 +39,7 @@
                 </br>
             {% endfor %}
         {% endif %}
+    {% endif %}
     </div>
 
 {% endblock content %}
