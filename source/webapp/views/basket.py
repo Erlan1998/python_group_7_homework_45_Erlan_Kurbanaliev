@@ -77,6 +77,9 @@ class BookingCreate(CreateView):
 
     def form_valid(self, form):
         booking = form.save()
+        if self.request.user.is_authenticated:
+            booking.user = self.request.user
+            booking.save()
         for b in Basket.objects.all():
             BookingProduct.objects.create(
                 product=b.product,

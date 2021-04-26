@@ -46,4 +46,4 @@ class Booking(models.Model):
     tel = models.CharField(max_length=100, null=False, blank=False)
     adrese = models.CharField(max_length=100, null=False, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(get_user_model(), default=1, related_name='Booking', on_delete=models.CASCADE)
+    user = models.ForeignKey(get_user_model(), null=True, blank=True, related_name='Booking', on_delete=models.CASCADE)
