@@ -1,3 +1,5 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin
+
 from webapp.models import Product
 from webapp.forms import ProductForm, SearchForm, BasketForm
 from django.urls import reverse, reverse_lazy
@@ -50,29 +52,32 @@ class ProductView(DetailView):
     pk_url_kwarg = "id"
 
 
-class ProductCreate(CreateView):
+class ProductCreate(PermissionRequiredMixin, CreateView):
     model = Product
     template_name = 'products/product_create.html'
     form_class = ProductForm
+    permission_required = 'webapp.add_product'
 
     def get_success_url(self):
         return reverse('product', kwargs={'id': self.object.id})
 
 
-class ProductUpdate(UpdateView):
+class ProductUpdate(PermissionRequiredMixin, UpdateView):
     template_name = 'products/product_update.html'
     model = Product
     form_class = ProductForm
     context_object_name = 'product'
     pk_url_kwarg = 'id'
+    permission_required = 'webapp.change_product'
 
     def get_success_url(self):
         return reverse('product', kwargs={'id': self.object.id})
 
 
-class ProductDelete(DeleteView):
+class ProductDelete(PermissionRequiredMixin, DeleteView):
     template_name = 'products/product_delete.html'
     model = Product
     context_object_name = 'product'
     pk_url_kwarg = 'id'
     success_url = reverse_lazy('index_all')
+    permission_required = 'webapp.delete_product'

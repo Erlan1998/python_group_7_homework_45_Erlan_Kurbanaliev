@@ -11,6 +11,10 @@ class BasketIndex(ListView):
     model = Basket
     context_object_name = 'baskets'
 
+    def get_queryset(self):
+        cart = self.request.session.get('cart', [])
+        return Basket.objects.filter(pk__in=cart)
+
     def get_context_data(self, **kwargs):
         kwargs = super().get_context_data(**kwargs)
         kwargs['form'] = BasketForm()
@@ -22,23 +26,26 @@ class BasketIndex(ListView):
 class CreateBasket(TemplateView):
 
     def post(self, request, **kwargs):
+        cart = request.session.get('cart', [])
         product = Product.objects.get(pk=kwargs.get('id'))
         form = BasketForm(data=request.POST)
+
         if form.is_valid():
             if product.quantity >= form.cleaned_data.get('quantity'):
                 try:
-                    basket = Basket.objects.get(product__pk=product.pk)
+                    basket = Basket.objects.get(product__pk=product.pk, pk__in=cart)
                     basket.quantity += form.cleaned_data.get('quantity')
                     basket.save()
 
                 except Basket.DoesNotExist:
-                    Basket.objects.create(
+                    b = Basket.objects.create(
                         product=product,
                         quantity=form.cleaned_data.get('quantity')
                     )
+                    cart.append(b.pk)
                 product.quantity -= form.cleaned_data.get('quantity')
                 product.save()
-
+        request.session['cart'] = cart
         return redirect('index_all')
 
 
@@ -77,4 +84,5 @@ class BookingCreate(CreateView):
                 quantity=b.quantity
             )
             b.delete()
+
         return redirect('index_all')
