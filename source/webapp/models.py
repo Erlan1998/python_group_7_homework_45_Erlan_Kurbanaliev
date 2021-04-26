@@ -1,6 +1,6 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.core.validators import MinValueValidator
-
 
 
 class Product(models.Model):
@@ -9,6 +9,7 @@ class Product(models.Model):
     category = models.ForeignKey('webapp.Categories', related_name='Products', on_delete=models.PROTECT)
     quantity = models.IntegerField(null=False, blank=False, validators=[MinValueValidator(0)])
     price = models.DecimalField(max_digits=7, decimal_places=2, null=False, blank=False)
+    user = models.ManyToManyField(get_user_model(), default=1, related_name='projects', verbose_name='пользователи')
 
     class Meta:
         db_table = 'Lists'
@@ -45,3 +46,4 @@ class Booking(models.Model):
     tel = models.CharField(max_length=100, null=False, blank=False)
     adrese = models.CharField(max_length=100, null=False, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(get_user_model(), default=1, related_name='Booking', on_delete=models.CASCADE)
