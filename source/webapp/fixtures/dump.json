@@ -7,7 +7,8 @@
     "description": "",
     "category": 2,
     "quantity": 15,
-    "price": "700.00"
+    "price": "700.00",
+    "user": []
   }
 },
 {
@@ -17,8 +18,9 @@
     "name": "Бутсы Найк",
     "description": "Радуется так душа, когда обувь хороша!",
     "category": 2,
-    "quantity": 16,
-    "price": "1500.00"
+    "quantity": 70,
+    "price": "1500.00",
+    "user": []
   }
 },
 {
@@ -29,7 +31,8 @@
     "description": "Радуется так душа, когда обувь хороша!",
     "category": 3,
     "quantity": 20,
-    "price": "1000.00"
+    "price": "1000.00",
+    "user": []
   }
 },
 {
@@ -39,8 +42,9 @@
     "name": "Веник",
     "description": "В вашем доме будет чисто и уютно",
     "category": 4,
-    "quantity": 297,
-    "price": "150.00"
+    "quantity": 160,
+    "price": "150.00",
+    "user": []
   }
 },
 {
@@ -50,8 +54,9 @@
     "name": "Книги",
     "description": "Разные Жанры книг!",
     "category": 5,
-    "quantity": 100,
-    "price": "400.00"
+    "quantity": 180,
+    "price": "400.00",
+    "user": []
   }
 },
 {
@@ -62,7 +67,8 @@
     "description": "шариковые и обычные!",
     "category": 5,
     "quantity": 5000,
-    "price": "10.00"
+    "price": "10.00",
+    "user": []
   }
 },
 {
@@ -72,8 +78,9 @@
     "name": "Корандаши",
     "description": "Цветные и простые! качество пушка!",
     "category": 5,
-    "quantity": 3000,
-    "price": "25.00"
+    "quantity": 2800,
+    "price": "25.00",
+    "user": []
   }
 },
 {
@@ -84,7 +91,8 @@
     "description": "Футбольный мяч ЛЧ 2021!",
     "category": 2,
     "quantity": 300,
-    "price": "800.00"
+    "price": "800.00",
+    "user": []
   }
 },
 {
@@ -94,8 +102,9 @@
     "name": "Nike",
     "description": "Лучшая спортивная компания в мире!",
     "category": 2,
-    "quantity": 200,
-    "price": "12211.00"
+    "quantity": 60,
+    "price": "12211.00",
+    "user": []
   }
 },
 {
@@ -106,7 +115,8 @@
     "description": "Fdbvkjndfkjvnjfkdvdfv",
     "category": 3,
     "quantity": 200,
-    "price": "1500.00"
+    "price": "1500.00",
+    "user": []
   }
 },
 {
@@ -146,103 +156,196 @@
 },
 {
   "model": "webapp.bookingproduct",
-  "pk": 1,
-  "fields": {
-    "product": 10,
-    "booking": 1,
-    "quantity": 100
-  }
-},
-{
-  "model": "webapp.bookingproduct",
-  "pk": 2,
+  "pk": 18,
   "fields": {
     "product": 9,
     "booking": 1,
-    "quantity": 44
+    "quantity": 8
   }
 },
 {
   "model": "webapp.bookingproduct",
-  "pk": 3,
+  "pk": 19,
   "fields": {
     "product": 15,
     "booking": 1,
-    "quantity": 1
-  }
-},
-{
-  "model": "webapp.bookingproduct",
-  "pk": 4,
-  "fields": {
-    "product": 15,
-    "booking": 2,
-    "quantity": 23
-  }
-},
-{
-  "model": "webapp.bookingproduct",
-  "pk": 5,
-  "fields": {
-    "product": 5,
-    "booking": 2,
     "quantity": 4
   }
 },
 {
   "model": "webapp.bookingproduct",
-  "pk": 6,
+  "pk": 20,
   "fields": {
-    "product": 7,
+    "product": 15,
     "booking": 2,
-    "quantity": 3
+    "quantity": 2
   }
 },
 {
   "model": "webapp.bookingproduct",
-  "pk": 7,
+  "pk": 21,
+  "fields": {
+    "product": 5,
+    "booking": 2,
+    "quantity": 2
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 22,
+  "fields": {
+    "product": 15,
+    "booking": 3,
+    "quantity": 8
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 23,
+  "fields": {
+    "product": 5,
+    "booking": 3,
+    "quantity": 8
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 24,
+  "fields": {
+    "product": 11,
+    "booking": 4,
+    "quantity": 80
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 25,
+  "fields": {
+    "product": 7,
+    "booking": 5,
+    "quantity": 8
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 26,
+  "fields": {
+    "product": 15,
+    "booking": 6,
+    "quantity": 10
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 27,
+  "fields": {
+    "product": 5,
+    "booking": 6,
+    "quantity": 5
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 28,
+  "fields": {
+    "product": 5,
+    "booking": 7,
+    "quantity": 5
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 29,
+  "fields": {
+    "product": 11,
+    "booking": 7,
+    "quantity": 100
+  }
+},
+{
+  "model": "webapp.bookingproduct",
+  "pk": 30,
   "fields": {
     "product": 9,
-    "booking": 2,
-    "quantity": 6
+    "booking": 7,
+    "quantity": 10
   }
 },
 {
   "model": "webapp.booking",
   "pk": 1,
   "fields": {
-    "name": "Putin",
-    "tel": "0399393939",
-    "adrese": "Moscva",
-    "created_at": "2021-04-05T12:40:04.718Z"
+    "name": "Султан",
+    "tel": "0502010720",
+    "adrese": "Бишкек",
+    "created_at": "2021-04-26T11:17:56.035Z",
+    "user": 3
   }
 },
 {
   "model": "webapp.booking",
   "pk": 2,
   "fields": {
-    "name": "Erlan",
-    "tel": "0502010720",
-    "adrese": "Bishkek",
-    "created_at": "2021-04-05T12:50:07.308Z"
+    "name": "Бека",
+    "tel": "0399393939",
+    "adrese": "Арча-Бешик",
+    "created_at": "2021-04-26T11:19:30.875Z",
+    "user": 1
   }
 },
 {
-  "model": "auth.user",
-  "pk": 1,
+  "model": "webapp.booking",
+  "pk": 3,
   "fields": {
-    "password": "pbkdf2_sha256$216000$zyUQBKOazjPu$o6sKLl0xZiFhftbL1GeXUwyoifL855/Y4k3RxuBBHJU=",
-    "last_login": "2021-04-05T12:41:38.623Z",
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "admin@mail.ru",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2021-03-05T09:13:42.463Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Путин",
+    "tel": "0502010720",
+    "adrese": "Moscva",
+    "created_at": "2021-04-26T11:22:20.204Z",
+    "user": null
+  }
+},
+{
+  "model": "webapp.booking",
+  "pk": 4,
+  "fields": {
+    "name": "Жоке",
+    "tel": "0502010720",
+    "adrese": "Тунгуч",
+    "created_at": "2021-04-26T12:36:18.471Z",
+    "user": 3
+  }
+},
+{
+  "model": "webapp.booking",
+  "pk": 5,
+  "fields": {
+    "name": "ККК",
+    "tel": "0399393939",
+    "adrese": "какак",
+    "created_at": "2021-04-26T12:37:27.357Z",
+    "user": null
+  }
+},
+{
+  "model": "webapp.booking",
+  "pk": 6,
+  "fields": {
+    "name": "ERLAN",
+    "tel": "0502010720",
+    "adrese": "Bishkek",
+    "created_at": "2021-04-26T12:38:17.572Z",
+    "user": 2
+  }
+},
+{
+  "model": "webapp.booking",
+  "pk": 7,
+  "fields": {
+    "name": "Messi",
+    "tel": "6666666",
+    "adrese": "Barcelona",
+    "created_at": "2021-04-26T12:39:09.893Z",
+    "user": 2
   }
 }
 ]
