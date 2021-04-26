@@ -1,0 +1,43 @@
+{% extends 'shablon.html' %}
+
+{% block content %}
+    </br>
+    <body style="background-size: 100%; background-image: url('https://image.freepik.com/free-vector/shopping-online-on-website-online-store-shop-concept_100456-95.jpg') ">
+    <div class="container" style="max-width: 500px; color: aliceblue">
+        {% if not bookings %}
+            <h2>НЕТ ЗАКАЗОВ</h2>
+    {% else %}
+        {% include "partial/search_form.html" %}
+            {% for booking in bookings %}
+                <div class="list-group list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Name: {{ booking.name }}</h5>
+                      <small class="text-muted">Дата заказа: {{ booking.created_at }} шт</small>
+                    </div>
+                    <p class="mb-1">Адрес: {{ booking.adrese }}</p>
+                    <p class="mb-1">Телефон: {{ booking.tel }}</p>
+                    <table class="table table-dark">
+                        <thead>
+                        <tr>
+                          <th scope="col">Продукт</th>
+                          <th scope="col">Цена</th>
+                          <th scope="col">Количество</th>
+                        </tr>
+                      </thead>
+                        {% for p in booking.BookingProduct.all %}
+                      <tbody>
+                        <tr>
+                          <td>{{ p.product.name }}</td>
+                          <td>{{ p.product.price }}</td>
+                          <td>{{ p.quantity }}</td>
+                        </tr>
+                      </tbody>
+                        {%  endfor %}
+                    </table>
+                </div>
+                </br>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+{% endblock content %}
