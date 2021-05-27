@@ -6,6 +6,7 @@ class OrderBooking(serializers.ModelSerializer):
     class Meta:
         model = BookingProduct
         fields = ('id', 'product', 'booking', 'quantity')
+        read_only_fields = ('booking',)
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -17,4 +18,14 @@ class OrderSerializer(serializers.ModelSerializer):
         read_only_fields = ('user', 'id')
 
     def create(self, validated_data):
-        print(validated_data)
+        minus_data = validated_data.pop('BookingProduct')
+        creat_new = Booking.objects.create(**validated_data)
+        for data in minus_data:
+            w = BookingProduct(
+                product=data['product'],
+                booking=creat_new,
+                quantity=data['quantity']
+            )
+            w.save()
+        validated_data['BookingProduct'] = minus_data
+        return validated_data
