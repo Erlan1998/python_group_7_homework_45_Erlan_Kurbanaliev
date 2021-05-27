@@ -62,6 +62,9 @@ class DeleteBasket(TemplateView):
                 basket.quantity -= form.cleaned_data.get('quantity')
                 basket.save()
             elif basket.quantity == form.cleaned_data.get('quantity'):
+                cart = request.session.get('cart', [])
+                cart.remove(basket.pk)
+                request.session['cart'] = cart
                 product = basket.product
                 product.quantity += form.cleaned_data.get('quantity')
                 product.save()
@@ -76,16 +79,17 @@ class BookingCreate(CreateView):
     form_class = BookingForm
 
     def form_valid(self, form):
+        cart = self.request.session.get('cart', [])
         booking = form.save()
         if self.request.user.is_authenticated:
             booking.user = self.request.user
             booking.save()
-        for b in Basket.objects.all():
+        for b in Basket.objects.filter(pk__in=cart):
             BookingProduct.objects.create(
                 product=b.product,
                 booking=booking,
                 quantity=b.quantity
             )
             b.delete()
-
+        self.request.session['cart'] = []
         return redirect('index_all')
